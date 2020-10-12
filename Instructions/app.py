@@ -48,7 +48,9 @@ def prcp():
     return jsonify(prcp_dict)
 
 @app.route('/api/v1.0/stations')
-def stations():
+def Station():
+    stations_q=session.query(stations.station).all()
+    return jsonify(stations_q)
 
 
 
